@@ -1,0 +1,26 @@
+.block {
+    position: absolute;
+    top: 30%;
+    left: 36%;
+    width: 26%;
+}
+
+.block__text {
+    margin: 5px 0;
+    text-align: center;
+}
+
+    .block__text_bold {
+        font-weight: bold;
+    }
+
+.block__controls {
+    margin-top: 15px;
+}
+
+.block__button {
+    font-size: 20px;
+    margin: 0 2px;
+    padding: 5px;
+    background: #ddd;
+}

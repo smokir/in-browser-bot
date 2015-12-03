@@ -1,0 +1,16 @@
+.twosided {
+    height: 100%;
+}
+
+.twosided__button-text {
+    display: inline-block;
+    transform: rotate(-90deg);
+}
+
+.twosided__scrolled {
+    overflow: auto;
+}
+
+.twosided__right-aligned {
+    text-align: right;
+}

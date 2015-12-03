@@ -1,0 +1,35 @@
+.flex {
+    display: flex;
+}
+
+    .flex_column {
+        flex-direction: column;
+    }
+
+    .flex_1 {
+        flex: 1 1 0;
+    }
+
+    .flex_2 {
+        flex: 2 2 0;
+    }
+    
+    .flex_align-end {
+        align-self: flex-end;
+    }
+    
+    .flex_align-start {
+        align-self: flex-start;
+    }
+    
+    .flex_justify-center {
+        justify-content: center;
+    }
+
+/* webkit hack */
+@supports (-webkit-appearance:none) {
+    .flex_1,
+    .flex_2 {
+        width: 0;
+    }
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>InBrowserBot</title>
+
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/block.css">
+    <link rel="stylesheet" href="styles/flex.css">
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="stylesheet" href="styles/twosided.css">
+</head>
+
+<body>
+
+    <div class="block" id="js-welcome">
+        <div>
+            <div class="block__text block__text_bold">in-browser bot</div>
+            <div class="block__text">makes http requests for you</div>
+        </div>
+
+        <div class="block__controls flex">
+            <label class="block__button button flex flex_1 flex_justify-center">
+                <input class="g-hidden" id="js-welcome-load" type="file">
+                <span>load</span>
+            </label>
+            <span class="block__button button flex flex_1 flex_justify-center" id="js-welcome-create">create</span>
+            <span class="block__button button flex flex_1 flex_justify-center g-hidden" id="js-welcome-edit">edit</span>
+        </div>
+    </div>
+
+
+    <div class="form g-hidden" id="js-requests">
+        <div class="flex">
+            <span class="button input form__element flex flex_align-end" id="js-group-add">&plus;</span>
+
+            <div id="js-group-all" class="flex flex_column flex_1">
+                <!-- js-group -->
+            </div>
+        </div>
+        <div class="flex">
+            <span class="button form__element form__element_button flex flex_1 flex_justify-center" id="js-requests-download">download</span>
+            <span class="button form__element form__element_button flex flex_1 flex_justify-center" id="js-requests-submit">start</span>
+        </div>
+    </div>
+
+    <div class="flex js-group g-hidden">
+        <span class="button input form__element flex flex_align-start js-group-remove">&times;</span>
+
+        <select class="input form__element flex flex_align-start" name="multiplicity">
+            <option value="single">single</option>
+            <option value="group">group</option>
+        </select>
+
+        <input class="input form__element form__element_interval flex flex_align-start" name="interval" placeholder="interval" />
+
+        <div class="js-request-all flex flex_column flex_1">
+            <!-- js-request -->
+        </div>
+
+        <span class="button input form__element flex flex_align-end js-request-add">&plus;</span>
+    </div>
+
+    <div class="flex js-request g-hidden">
+        <select class="input form__element flex flex_align-start" name="method">
+            <option value="get">get</option>
+            <option value="post">post</option>
+        </select>
+
+        <input class="input form__element flex flex_2 flex_align-start " name="url" placeholder="url" />
+
+        <div class="flex flex_column flex_2 js-parameter-all">
+            <!-- js-parameter -->
+        </div>
+
+        <span class="button input form__element flex flex_align-end js-parameter-add ">&plus;</span>
+
+        <span class="button input form__element flex flex_align-start js-request-remove ">&times;</span>
+    </div>
+
+    <div class="js-parameter flex g-hidden">
+        <input class="input form__element flex flex_1" name="name" placeholder="name" />
+        <input class="input form__element flex flex_1" name="value" placeholder="value" />
+
+        <span class="button input form__element js-parameter-remove flex">&times;</span>
+    </div>
+
+
+    <div class="twosided flex">
+        <iframe class="flex flex_1 g-hidden" id="js-iframe" name="main-iframe"></iframe>
+
+        <button class="g-hidden" id="js-statistics-toggle">
+            <span class="twosided__button-text">Statisctics</span>
+        </button>
+
+        <div class="twosided__scrolled flex flex_1 flex_column g-hidden" id="js-statistics"></div>
+    </div>
+
+    <div class="twosided js-stat g-hidden">
+        <div name="url"></div>
+        <div class="twosided__right-aligned" name="time"></div>
+    </div>
+
+    <script src="scripts/app.js"></script>
+    <script src="scripts/vm.statistics.js"></script>
+    <script src="scripts/vm.queue.js"></script>
+    <script src="scripts/vm.constructor.js"></script>
+    <script src="scripts/script.js"></script>
+
+</body>
+
+</html>

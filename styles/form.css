@@ -1,0 +1,24 @@
+.form {
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    width: 70%;
+}
+
+.form__element {
+    font-size: 16px;
+    line-height: 20px;
+    margin: 5px;
+    padding: 5px 0;
+}
+
+    .form__element_button {      
+        font-size: 20px;
+        margin: 0 2px;
+        padding: 5px;
+        background: #ddd;
+    }
+
+    .form__element_interval {
+        max-width: 6em
+    }
